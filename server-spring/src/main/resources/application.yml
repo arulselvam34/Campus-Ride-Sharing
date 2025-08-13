@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ride
+    username: root
+    password: arul
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+app:
+  jwt:
+    secret: SuperSecretKey_ForCampusRideJWTs_ChangeMe_AtLeast32Chars_Long_2025
+    expirationMs: 86400000
+
